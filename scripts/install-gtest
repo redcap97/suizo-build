@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -eux
+
+GTEST_URL=https://github.com/google/googletest.git
+
+git clone ${GTEST_URL} /tmp/gtest
+
+cd /tmp/gtest
+git checkout ${GTEST_REVISION} -b build
+
+cmake .
+make -j4
+make install

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -eux
+
+CLANG_URL=http://releases.llvm.org/${CLANG_VERSION}/clang+llvm-${CLANG_VERSION}-x86_64-linux-gnu-debian8.tar.xz
+
+wget --no-verbose -O /tmp/clang.tar.xz ${CLANG_URL}
+tar Jxfv /tmp/clang.tar.xz --strip-components=1 -C /usr/local
