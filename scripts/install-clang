@@ -6,3 +6,4 @@ CLANG_URL=http://releases.llvm.org/${CLANG_VERSION}/clang+llvm-${CLANG_VERSION}-
 
 wget --no-verbose -O /tmp/clang.tar.xz ${CLANG_URL}
 tar Jxfv /tmp/clang.tar.xz --strip-components=1 -C /usr/local
+rm /tmp/clang.tar.xz
